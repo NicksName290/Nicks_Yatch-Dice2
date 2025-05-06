@@ -1,4 +1,4 @@
-#versao : 18
+#versao : 20
 import random
 def rolar_dados(qnt):
   lista = []
@@ -34,3 +34,15 @@ def calcula_pontos_soma(l):
   for pnt in l:
     soma += pnt
   return soma
+#...
+def calcula_pontos_sequencia_baixa(lista):
+   for i in lista:
+      if i+1 in lista and i+2 in lista and i+3 in lista:
+         return 15
+   return 0
+#agora so que mais
+def calcula_pontos_sequencia_alta(lista):
+   for i in lista:
+      if i+1 in lista and i+2 in lista and i+3 in lista and i+4 in lista:
+         return 30
+   return 0
