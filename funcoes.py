@@ -1,4 +1,4 @@
-#versao : 20
+#versao : 24
 import random
 def rolar_dados(qnt):
   lista = []
@@ -34,15 +34,44 @@ def calcula_pontos_soma(l):
   for pnt in l:
     soma += pnt
   return soma
-#...
+#SEQUENCIA BAIXA (nn e poker...)
 def calcula_pontos_sequencia_baixa(lista):
    for i in lista:
       if i+1 in lista and i+2 in lista and i+3 in lista:
          return 15
    return 0
-#agora so que mais
+#SEQUENCIA ALTA (poker???)
 def calcula_pontos_sequencia_alta(lista):
    for i in lista:
       if i+1 in lista and i+2 in lista and i+3 in lista and i+4 in lista:
          return 30
+   return 0
+#Adoro poker btw, mesmo que nn seja poker. FULL HOUSE
+def calcula_pontos_full_house(lista):
+   dupla = False
+   maior_dupla = 0
+   trio = False
+   maior_trio = 0
+   soma = 0
+   for i in lista:
+      if lista.count(i) == 2:
+         dupla = True
+         if i > maior_dupla:
+            soma -= maior_dupla*2
+            maior_dupla = i
+            soma += maior_dupla*2
+      if lista.count(i) == 3:
+         trio = True
+         if i > maior_trio:
+            soma -= maior_trio*3
+            maior_trio = i
+            soma += maior_trio*3
+   if trio == True and dupla == True:
+      return soma
+   return 0
+#Odeio quando alguem consegue um QUADRA, sempre e porque eles comecaram com uma dupla
+def calcula_pontos_quadra(l):
+   for i in l:
+      if l.count(i) == 4:
+        return i*4
    return 0
