@@ -19,6 +19,6 @@ def remover_dado(rolados, estoque, tirar):
    lista = []
    estoque.append(estoque[tirar])
    del estoque[tirar]
-   lista.append(rolados)
    lista.append(estoque)
+   lista.append(rolados)
    return lista
