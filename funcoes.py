@@ -1,4 +1,4 @@
-#versao : 27
+#versao : 28
 import random
 def rolar_dados(qnt):
   lista = []
@@ -75,7 +75,7 @@ def calcula_pontos_quadra(l):
    sim = False
    for i in l:
       soma += i
-      if l.count(i) == 4:
+      if l.count(i) >= 4:
         sim = True
    if sim == True : 
       return soma
