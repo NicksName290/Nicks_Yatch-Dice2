@@ -1,4 +1,4 @@
-#versao : 14
+#versao : 16
 import random
 def rolar_dados(qnt):
   lista = []
@@ -17,8 +17,8 @@ def guardar_dado(rolados, estoque, manter):
 #ok...
 def remover_dado(rolados, estoque, tirar):
    lista = []
-   estoque.append(estoque[tirar])
+   rolados.append(estoque[tirar])
    del estoque[tirar]
-   lista.append(estoque)
    lista.append(rolados)
+   lista.append(estoque)
    return lista
