@@ -1,4 +1,4 @@
-#versao : 28
+#versao : 29
 import random
 def rolar_dados(qnt):
   lista = []
@@ -79,4 +79,10 @@ def calcula_pontos_quadra(l):
         sim = True
    if sim == True : 
       return soma
+   return 0
+#QUINA (Agr ja saiu do Poker)
+def calcula_pontos_quina(l):
+   for i in l:
+      if l.count(i) >= 5:
+         return 50
    return 0
