@@ -10,7 +10,7 @@ def rolar_dados(qnt):
 def guardar_dado(rolados, estoque, guardar):
     lista = []
     estoque.append(rolados[guardar])
-    del dados_rolados[guardar]
+    del rolados[guardar]
     lista.append(rolados)
     lista.append(estoque)
     return lista
