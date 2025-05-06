@@ -1,4 +1,4 @@
-#versao : 17
+#versao : 18
 import random
 def rolar_dados(qnt):
   lista = []
@@ -28,3 +28,9 @@ def calcula_pontos_regra_simples(l):
     for n in l:
         dicionario[n] += n
     return dicionario
+#again
+def calcula_pontos_soma(l):
+  soma = 0
+  for pnt in l:
+    soma += pnt
+  return soma
