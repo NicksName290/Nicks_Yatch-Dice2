@@ -1,4 +1,4 @@
-#versao : 40
+#versao : 41
 import random
 def rolar_dados(qnt):
   lista = []
@@ -188,7 +188,7 @@ def calcula_pontos_regra_avancada(l):
    return dic
 #Curiosidade: eu passei mais tempo na 1 e na 2 do que todo o resto
 #FAZ JOGADA
-def realiza_jogada(lista, categoria, cartela):
+def faz_jogada(lista, categoria, cartela):
     if categoria in cartela['regra_avancada']:
         if cartela['regra_avancada'][categoria] == -1:
             pontos_avancados = calcula_pontos_regra_avancada(lista)
