@@ -1,4 +1,4 @@
-#versao : 38
+#versao : 39
 import random
 def rolar_dados(qnt):
   lista = []
@@ -193,7 +193,7 @@ def faz_jogada(lista, categoria, cartela):
         if cartela['regra_simples'][categoria] == -1:
             numero = int(categoria)
             pontos_simples = numero * lista.count(numero)
-            cartela['regra_simples'][numero+1] = pontos_simples
+            cartela['regra_simples'][numero] = pontos_simples
     elif categoria in cartela['regra_avancada']:
         if cartela['regra_avancada'][categoria] == -1:
             pontos_avancados = calcula_pontos_regra_avancada(lista)
